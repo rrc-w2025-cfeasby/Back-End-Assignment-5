@@ -15,7 +15,7 @@ const swaggerOptions: swaggerJsdoc.Options = {
             },
         ],
     },
-    apis: ["./src/api/v1/routes/*.ts"], // JSDoc route comments
+    apis: ["./src/api/v1/routes/*.ts", "./src/api/v1/validation/*.ts"], // JSDoc route comments
 };
 
 export const generateSwaggerSpec = (): object => {
