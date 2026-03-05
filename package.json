@@ -23,11 +23,13 @@
   "homepage": "https://github.com/rrc-w2025-cfeasby/Back-End-Assignment-3#readme",
   "description": "",
   "dependencies": {
+    "dotenv": "^17.3.1",
     "express": "^5.2.1",
     "firebase-admin": "^13.6.0",
     "joi": "^18.0.2"
   },
   "devDependencies": {
+    "@types/dotenv": "^6.1.1",
     "@types/express": "^5.0.6",
     "@types/jest": "^29.5.14",
     "@types/joi": "^17.2.2",
