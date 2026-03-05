@@ -2,11 +2,15 @@ import dotenv from "dotenv";
 dotenv.config();
 
 import express, { Express } from "express";
+import { getCorsOptions } from "../config/corsConfig";
+import cors from "cors";
 import { getHelmetConfig } from "../config/helmetConfig";
 import healthRoutes from "./api/v1/routes/healthRoutes";
 import eventRoutes from "./api/v1/routes/eventRoutes";
 
 const app: Express = express();
+
+app.use(cors(getCorsOptions()));
 
 app.use(getHelmetConfig());
 
