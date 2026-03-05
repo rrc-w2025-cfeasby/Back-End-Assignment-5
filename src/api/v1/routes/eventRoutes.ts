@@ -24,10 +24,12 @@ const router: Router = Router();
  *       content:
  *         application/json:
  *           schema:
- *             type: object
+ *             $ref: "#/components/schemas/CreateEvent"
  *     responses:
  *       201:
  *         description: Event created
+ *       400:
+ *         description: Validation error
  */
 router.post(
     "/events",
