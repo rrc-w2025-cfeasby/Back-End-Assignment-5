@@ -1,8 +1,11 @@
-import express from "express";
+import dotenv from "dotenv";
+dotenv.config();
+
+import express, { Express } from "express";
 import healthRoutes from "./api/v1/routes/healthRoutes";
 import eventRoutes from "./api/v1/routes/eventRoutes";
 
-const app = express();
+const app: Express = express();
 
 app.use(express.json());
 app.use("/api/v1", eventRoutes);
