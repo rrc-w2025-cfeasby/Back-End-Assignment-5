@@ -1,0 +1,39 @@
+{
+  "name": "back-end-assignment-3",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node src/server.ts",
+    "build": "tsc",
+    "test": "jest",
+    "firestore:test": "ts-node src/firestoreTest.ts",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rrc-w2025-cfeasby/Back-End-Assignment-3.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rrc-w2025-cfeasby/Back-End-Assignment-3/issues"
+  },
+  "homepage": "https://github.com/rrc-w2025-cfeasby/Back-End-Assignment-3#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^5.2.1",
+    "firebase-admin": "^13.6.0",
+    "joi": "^18.0.2"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/jest": "^29.5.14",
+    "@types/joi": "^17.2.2",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.4.6",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.9.3"
+  }
+}
