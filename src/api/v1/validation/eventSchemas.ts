@@ -1,6 +1,43 @@
 import Joi from "joi";
 
 /**
+ * @openapi
+ * components:
+ *   schemas:
+ *     CreateEvent:
+ *       type: object
+ *       required:
+ *         - name
+ *         - date
+ *         - capacity
+ *       properties:
+ *         name:
+ *           type: string
+ *           minLength: 3
+ *           example: "Tech Conference"
+ *         date:
+ *           type: string
+ *           format: date-time
+ *           example: "2026-06-01T10:00:00Z"
+ *         capacity:
+ *           type: integer
+ *           minimum: 10
+ *           example: 100
+ *         registrationCount:
+ *           type: integer
+ *           minimum: 0
+ *           example: 0
+ *         status:
+ *           type: string
+ *           enum: ["active", "cancelled", "completed"]
+ *           example: "active"
+ *         category:
+ *           type: string
+ *           enum: ["conference", "workshop", "meetup", "seminar", "general"]
+ *           example: "conference"
+ */
+
+/**
  * Joi Schema for Creating an Event
  * Validates the structure and constraints of the event creation request body.
  * 

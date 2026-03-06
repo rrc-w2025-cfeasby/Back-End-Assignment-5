@@ -1,16 +1,27 @@
-import express from "express";
+import dotenv from "dotenv";
+dotenv.config();
+
+import swaggerUi from "swagger-ui-express";
+import { generateSwaggerSpec } from "../config/swaggerConfig";
+import express, { Express } from "express";
+import { getCorsOptions } from "../config/corsConfig";
+import cors from "cors";
+import { getHelmetConfig } from "../config/helmetConfig";
 import healthRoutes from "./api/v1/routes/healthRoutes";
 import eventRoutes from "./api/v1/routes/eventRoutes";
 
-const app = express();
+const app: Express = express();
 
+app.use(cors(getCorsOptions()));
+app.use(getHelmetConfig());
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(generateSwaggerSpec()));
 app.use(express.json());
 app.use("/api/v1", eventRoutes);
 app.use("/api/v1", healthRoutes);
 
 // Define a route
 app.get("/", (req, res) => {
-    res.send("Hello, Sergei, welcome to Assignment 3!");
+    res.send("Hello, World!");
 });
 
 export default app;
